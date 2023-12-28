@@ -1,0 +1,63 @@
+<!-- include header -->
+<%- include('include/header') %>
+    <!-- /include header -->
+
+
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add_services" class="border-shadow">
+                    <span class="text-gradient">New Service <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Service_Name</th>
+                        <th>Service_Type</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% services.forEach(service => { %>
+                        <tr>
+                            <td><%= service._id %></td>
+                            <td><%= service.name %></td>
+                            <td><%= service.type %></td>
+                            <td><%= service.descript %></td>
+                            <td><%= service.price %></td>
+                            <td>
+                                <a href="/update_service/<%= service._id %>" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+                                </a>
+                            
+                                
+                                <a href="/delete_service/<%= service._id %>" class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fas fa-times"></i></span>
+                                </a>
+                                
+
+                            </td>
+                            
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+
+ 
+
+
+
+
+    <!-- /Main Site -->
+
+
+    <!-- include footer -->
+    <%- include('include/footer') %>
+        <!-- /include footer -->

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Booking Details</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Client Name</th>
+                    <th>Service Name</th>
+                    <th>Service Type</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Booking Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% console.log('Received Data:', bookings); %>
+
+                <% bookings.forEach((booking) => { %>
+                    <tr>
+                        <td><%= booking.clientname %></td>
+                        <td><%= booking.servicename %></td>
+                        <td><%= booking.servicetype %></td>
+                        <td><%= booking.descript %></td>
+                        <td>$<%= booking.price %></td>
+                        <td><%= booking.bookingdate.toDateString() %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
