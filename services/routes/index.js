@@ -5,11 +5,7 @@ const Servicedb = require('./config');
 const connect = require('./mongo_connect');
 
 
-route.get('/add_services', (req, res) => {
-    console.log('Reached GET /add_services');
-    const indexPath = path.join(__dirname, '../views/add_services.ejs');
-    res.render(indexPath);
-});
+
 
 route.get('/', async (req, res) => {
     try {
@@ -22,7 +18,11 @@ route.get('/', async (req, res) => {
     }
 });
 
-
+route.get('/add_services', (req, res) => {
+    console.log('Reached GET /add_services');
+    const indexPath = path.join(__dirname, '../views/add_services.ejs');
+    res.render(indexPath);
+});
 
 
 
