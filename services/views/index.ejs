@@ -6,7 +6,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/add_services" class="border-shadow">
+                <a href="/home/services/add_services" class="border-shadow">
                     <span class="text-gradient">New Service <i class="fas fa-user"></i></span>
                 </a>
             </div>
@@ -30,12 +30,12 @@
                             <td><%= service.descript %></td>
                             <td><%= service.price %></td>
                             <td>
-                                <a href="/update_service/<%= service._id %>" class="btn border-shadow update">
+                                <a href="/home/services/update_service/<%= service._id %>" class="btn border-shadow update">
                                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                                 </a>
                             
                                 
-                                <a href="/delete_service/<%= service._id %>" class="btn border-shadow delete">
+                                <a href="/home/services/delete_service/<%= service._id %>" class="btn border-shadow delete">
                                     <span class="text-gradient"><i class="fas fa-times"></i></span>
                                 </a>
                                 

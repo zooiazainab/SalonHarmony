@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const route = express.Router();
 // Homepage route
-router.get('/index', (req, res) => {
+route.get('/', (req, res) => {
     res.render('index'); // Render the index.ejs view
 });
-module.exports = router;
+module.exports = route;

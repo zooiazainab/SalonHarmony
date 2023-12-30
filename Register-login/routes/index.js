@@ -31,7 +31,7 @@ router.post('/',async(req,res)=>{
     // console.log(req_data);
     // req_data.save();
     const userdata = await users_collections.insertMany(data);
-    res.render('index');
+    res.redirect('/home');
 });
 
 router.post('/login', async(req,res)=>{
@@ -52,7 +52,7 @@ router.post('/login', async(req,res)=>{
           if (!passwordMatch) {
             return res.status(401).send('Invalid username or password');
           }
-          res.render('index');
+          res.redirect('/home');
     }catch(error) {
         console.error(error);
         res.status(500).send('Internal Server Error');

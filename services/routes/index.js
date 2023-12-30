@@ -39,7 +39,7 @@ route.post('/add_services', async (req, res) => {
 
         await newService.save();
 
-        res.redirect('/');
+        res.redirect('/home/services');
     } catch (error) {
         res.status(500).send('Error adding service');
     }
@@ -70,7 +70,7 @@ route.post('/update_service/:id', async (req, res) => {
 
         await Servicedb.findByIdAndUpdate(serviceId, updatedService);
 
-        res.redirect('/');
+        res.redirect('/home/services');
     } catch (error) {
         res.status(500).send('Error updating service');
     }
@@ -82,7 +82,7 @@ route.get('/delete_service/:id', async (req, res) => {
     try {
         const serviceId = req.params.id;
         await Servicedb.findByIdAndDelete(serviceId);
-        res.redirect('/');
+        res.redirect('/home/services');
     } catch (error) {
         res.status(500).send('Error deleting service');
     }

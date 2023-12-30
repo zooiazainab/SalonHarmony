@@ -21,8 +21,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.use('/home', homeRouter);
-app.use('/bookings', bookingsRouter);
-app.use('/services', servicesRouter);
+app.use('/home/bookings', bookingsRouter);
+app.use('/home/services', servicesRouter);
 app.use('/', signupLoginRouter);
 
 
