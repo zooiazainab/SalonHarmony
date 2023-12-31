@@ -10,7 +10,7 @@
   "scripts": {
     "start": "nodemon app.js",
     "test:unit": "mocha test/test-home.js",
-    "test:integration": "mocha test/integration.test.js",
+    "test:integration": "mocha test/integration.js",
     "test:e2e": "cypress run",
     "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "build": "npm install"
