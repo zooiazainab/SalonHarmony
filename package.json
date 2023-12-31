@@ -11,12 +11,14 @@
     "start": "nodemon app.js",
     "test:unit": "mocha test/test-home.js",
     "test:integration": "mocha test/integration.test.js",
-    "test": "npm run test:unit && npm run test:integration",
+    "test:e2e": "cypress run",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e",
     "build": "npm install"
   },
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-http": "^4.4.0",
+    "cypress": "^13.6.2",
     "mocha": "^10.2.0",
     "supertest": "^6.3.3"
   }
