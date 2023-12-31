@@ -7,10 +7,13 @@
     "mongoose": "^8.0.3",
     "nodemon": "^3.0.2"
   },
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha test/test-home.js",
+    "build": "npm install"
+  },
   "devDependencies": {
-    "assert": "^2.1.0",
-    "chai": "^5.0.0",
-    "chai-http": "^4.4.0",
-    "mocha": "^10.2.0"
+    "chai": "^4.3.4",
+    "chai-http": "^4.4.0"
   }
 }

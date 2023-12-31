@@ -27,8 +27,9 @@ app.use('/', signupLoginRouter);
 
 
 const port = 3500;
-app.listen(port, ()=>{
-    console.log('Server is running on our port');
-})
-
-
+const server = app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
+  });
+  
+  // Export the app and server instance
+  module.exports = { app, server };
